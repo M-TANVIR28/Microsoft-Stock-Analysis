@@ -50,7 +50,7 @@ This project uses the following tools and libraries:
    - Date values are parsed and set as the index for time series analysis.
 
 2. **Exploratory Data Analysis (EDA)**:
-   - We visualize Microsoft stock's **Closing Prices** over time.
+   - visualization of Microsoft stock's **Closing Prices** over time.
    - **Correlation heatmaps** and **daily returns** are calculated and plotted.
    - **Moving Averages** (50-day and 200-day) are computed and plotted to identify long-term trends.
 
