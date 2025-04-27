@@ -87,5 +87,3 @@ Interactive visualizations of the closing price and moving averages are created 
 ## Conclusion
 This analysis demonstrates how time series methods and statistical modeling techniques, such as ARIMA, can be applied to forecast stock prices. The interactive visualizations and insights provided offer a comprehensive view of Microsoft stock's historical trends, volatility, and future predictions.
 
----
-This document provides a summary of the Microsoft Stock Time Series Analysis project. All code and data used in this analysis are available in the repository.
