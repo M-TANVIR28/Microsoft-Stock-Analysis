@@ -15,7 +15,6 @@ This project uses the following tools and libraries:
 - **Statsmodels** (ARIMA) for time series analysis
 - **mplfinance** for candlestick chart visualization
 - **Plotly** for interactive dashboards
-- **Prophet** for advanced forecasting (optional)
 
 ## Key Features
 - **Data cleaning & preprocessing**: Cleaning and preparing data for analysis.
