@@ -19,6 +19,8 @@ Analyze Microsoft (MSFT) stock price trends from 1986 to 2025 using time series 
 - Data cleaning & preprocessing
 - Trend and moving average analysis
 - Time series decomposition (trend, seasonality, residuals)
+- Plot heatmap correlation between columns
+- Daily returns analysis
 - Volatility analysis
 - ARIMA forecasting (next 30 business days)
 - Interactive dashboards (Plotly)
