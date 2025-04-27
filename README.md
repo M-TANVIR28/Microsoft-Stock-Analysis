@@ -5,7 +5,7 @@ This project focuses on analyzing Microsoft (MSFT) stock price trends from 1986 
 
 ## Dataset Source
 - Microsoft stock data (1986–2025)
-- [Kaggle - Microsoft Stock Data](https://www.kaggle.com/datasets/umerhaddii/microsoft-stock-data-2025)
+- [Kaggle - Microsoft Stock Data](https://www.kaggle.com/datasets/umerhaddi/microsoft-stock-data-2025)
 
 ## Tools & Libraries
 This project uses the following tools and libraries:
@@ -30,7 +30,7 @@ This project uses the following tools and libraries:
 ## How to Run
 1. Install the required libraries:
     ```bash
-    pip install pandas numpy matplotlib seaborn plotly statsmodels mplfinance 
+    pip install pandas numpy matplotlib seaborn plotly statsmodels mplfinance
     ```
 
 2. **Download the dataset**:
@@ -44,35 +44,48 @@ This project uses the following tools and libraries:
 4. **Interactive Visualization**:
    - The project includes interactive charts created with Plotly for deeper insights into Microsoft stock trends and forecasts.
 
-## Analysis Process
-1. **Data Preprocessing**:
-   - The raw stock data is cleaned and converted to a pandas DataFrame.
-   - Date values are parsed and set as the index for time series analysis.
+## Code Implementation
 
-2. **Exploratory Data Analysis (EDA)**:
-   - visualization of Microsoft stock's **Closing Prices** over time.
-   - **Correlation heatmaps** and **daily returns** are calculated and plotted.
-   - **Moving Averages** (50-day and 200-day) are computed and plotted to identify long-term trends.
+### Import Libraries
+The following libraries are used for the analysis:
 
-3. **Time Series Decomposition**:
-   - The time series is decomposed into **trend**, **seasonality**, and **residual** components to understand its underlying patterns.
+- **Core Libraries**: Pandas and NumPy for data manipulation and handling.
+- **Visualization Libraries**: Matplotlib and Seaborn for static plots, Plotly for interactive visualizations.
+- **Time Series and Stats Libraries**: Statsmodels for time series analysis and ARIMA forecasting.
 
-4. **Volatility Analysis**:
-   - A rolling **30-day volatility** is calculated and visualized to show periods of high market risk.
+### Load Data and Initial Exploration
+The dataset is loaded from a CSV file. The first few rows, data types, and summary statistics are displayed. Missing values are checked, and the `Date` column is converted to a datetime format.
 
-5. **ARIMA Forecasting**:
-   - The ARIMA model is used to forecast Microsoft’s stock price for the next **30 business days**.
-   - The **forecast** is plotted along with the actual data to visualize potential future trends.
+### Data Resampling and Date Range
+Data is resampled to a monthly frequency and the average closing price is calculated for each month. A date range is also generated for the given time period.
 
-6. **Advanced Visualization**:
-   - **Candlestick charts** (using mplfinance) visualize Microsoft stock price movements over a short window of 100 days.
-   - **Interactive charts** (using Plotly) are created to explore the **closing price**, **moving averages**, and other metrics interactively.
+### Handling Holidays
+US federal holidays are generated using `USFederalHolidayCalendar`. These holidays are useful for understanding the market's performance around holidays.
 
-## Key Insights
-- **Stock Price Trend**: The closing price has shown a consistent upward trajectory, reflecting Microsoft's growth.
-- **Volatility**: Microsoft’s stock has shown varying levels of volatility, with certain periods experiencing more price fluctuations.
-- **Moving Averages**: The 50-day and 200-day moving averages are useful for tracking long-term stock trends and identifying signals for potential buying or selling.
-- **ARIMA Model**: The ARIMA model offers short-term forecasts, but future prices are highly influenced by external factors such as market events or sentiment.
+### PeriodIndex for Monthly Aggregation
+The data is aggregated by month using a `PeriodIndex` and the average closing price for each month is calculated.
+
+### Timezone Handling
+The data's timezone is localized to UTC and then converted to US Eastern time.
+
+### Visualization and Analysis
+Various visualizations are generated:
+- **Closing Price Plot**: A plot showing the closing prices of MSFT stock over time.
+- **Heatmap**: A heatmap showing the correlation between different stock features.
+- **Daily Returns**: A plot showing daily percentage returns of the stock.
+- **Moving Averages**: 50-day and 200-day moving averages are calculated and plotted along with the closing prices.
+
+### ARIMA Forecasting
+The ARIMA model is used to forecast the next 30 business days of Microsoft stock prices. The forecasted values are plotted along with the actual closing prices.
+
+### Candlestick Chart Visualization
+A candlestick chart is generated using `mplfinance` for the last 100 days of data, which provides insights into daily stock price movements.
+
+### Interactive Charts
+Interactive visualizations of the closing price and moving averages are created using Plotly. These charts allow users to zoom in and explore trends interactively.
 
 ## Conclusion
-This project offers a detailed time series analysis of **Microsoft's stock price**, highlighting trends, volatility, and providing future forecasts based on statistical modeling. The combination of data visualization, moving averages, and time series forecasting offers actionable insights into stock price movements.
+This analysis demonstrates how time series methods and statistical modeling techniques, such as ARIMA, can be applied to forecast stock prices. The interactive visualizations and insights provided offer a comprehensive view of Microsoft stock's historical trends, volatility, and future predictions.
+
+---
+This document provides a summary of the Microsoft Stock Time Series Analysis project. All code and data used in this analysis are available in the repository.
