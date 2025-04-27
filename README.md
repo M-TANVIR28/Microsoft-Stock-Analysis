@@ -1,7 +1,7 @@
 # Microsoft Stock Time Series Analysis
 
 ## Project Overview
-This project focuses on analyzing Microsoft (MSFT) stock price trends from 1986 to 2025 using time series analysis. It includes various methods like decomposition, volatility analysis, and forecasting, with the aim to gain insights into stock price movements and make future predictions.
+This project focuses on analyzing Microsoft (MSFT) stock price trends from 1986 to 2025 using time series analysis. It includes various methods like decomposition,Heatmap, volatility analysis, and forecasting, with the aim to gain insights into stock price movements and make future predictions.
 
 ## Dataset Source
 - Microsoft stock data (1986–2025)
