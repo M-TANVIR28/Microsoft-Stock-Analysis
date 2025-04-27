@@ -30,7 +30,7 @@ This project uses the following tools and libraries:
 ## How to Run
 1. Install the required libraries:
     ```bash
-    pip install pandas numpy matplotlib seaborn plotly statsmodels mplfinance prophet
+    pip install pandas numpy matplotlib seaborn plotly statsmodels mplfinance 
     ```
 
 2. **Download the dataset**:
